@@ -1,0 +1,14 @@
+query getFormTest(
+  $acronym: String
+  $fields: [String]
+  $id: String
+  $account: String
+) {
+  document(acronym: $acronym, fields: $fields, id: $id, account: $account) {
+    id
+    fields {
+      key
+      value
+    }
+  }
+}

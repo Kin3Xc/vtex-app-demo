@@ -12,8 +12,9 @@ function CurrentModal() {
   const [isOpen, setIsOpen] = useState(false)
   // get product on the context
   const { product }: any = useContext(ProductContext)
+
   // get data from master data form
-  const resFormTest: any = useQuery(getFormTest, {
+  const { data: resFormTest }: any = useQuery(getFormTest, {
     variables: {
       acronym: 'ET',
       fields: ['name', 'email', 'phone', 'comment', 'address'],
